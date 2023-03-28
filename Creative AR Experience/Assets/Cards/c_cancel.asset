@@ -16,4 +16,7 @@ MonoBehaviour:
   productID: 0
   productDescription: A comfortable shoe
   prefab: {fileID: 5848909015079553666, guid: 87f7effe63557f5498c060c3872e41da, type: 3}
+  availableColors:
+  - {r: 0.62792194, g: 0.8867924, b: 0.52287287, a: 0}
+  - {r: 0.36565503, g: 0.43040842, b: 0.7830189, a: 0}
   type: 2

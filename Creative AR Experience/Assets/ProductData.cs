@@ -9,6 +9,7 @@ public class ProductData : ScriptableObject {
     [TextArea(5,20)]
     public string productDescription;
     public GameObject prefab;
+    public Color[] availableColors;
 
     public enum ProductType{
         shirt,
@@ -17,4 +18,6 @@ public class ProductData : ScriptableObject {
     };
 
     public ProductType type;
+
+    public string fabric;
 }

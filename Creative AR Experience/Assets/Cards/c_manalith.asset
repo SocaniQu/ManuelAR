@@ -16,4 +16,10 @@ MonoBehaviour:
   productID: 2
   productDescription: Soft silk shirt
   prefab: {fileID: 4053700619841877630, guid: fd9d28cf56183a74692f3f83a1321c64, type: 3}
+  availableColors:
+  - {r: 0.44323605, g: 0.8773585, b: 0.30210927, a: 0}
+  - {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 0}
+  - {r: 0.89025754, g: 0.9056604, b: 0.85866857, a: 0}
+  - {r: 0.9529412, g: 0.09411765, b: 0.12674075, a: 0}
+  - {r: 0.15574935, g: 0.26323807, b: 0.9433962, a: 0}
   type: 0
