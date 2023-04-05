@@ -56,19 +56,37 @@ extern void PlaceTrackedImage_OnTrackedImagesChanged_m357EDDE741BE5B146B06BFDAFF
 extern void PlaceTrackedImage_Reset_mCA4C0874D9A9E239171593A13BABE63B2DB04248 (void);
 // 0x00000016 System.Void PlaceTrackedImage::DestroyTrackedComponent(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void PlaceTrackedImage_DestroyTrackedComponent_m6CB017B420992CC98713070D23AFE1A9AB5AC7A7 (void);
-// 0x00000017 System.Void PlaceTrackedImage::.ctor()
+// 0x00000017 System.Void PlaceTrackedImage::NewUI(UnityEngine.Transform,ProductData)
+extern void PlaceTrackedImage_NewUI_mC1EB4609951986C230AFE374DE6B6B23B0EA2C8A (void);
+// 0x00000018 System.Void PlaceTrackedImage::.ctor()
 extern void PlaceTrackedImage__ctor_m9BF1FE5142D225B651568DF1AECB42B019F3153A (void);
-// 0x00000018 System.Void ProductData::.ctor()
+// 0x00000019 System.Void ProductData::.ctor()
 extern void ProductData__ctor_mBBB18398A2B12E7DE775ADB32F00675D07BFD14F (void);
-// 0x00000019 System.Void ProductDisplay::OnEnable()
+// 0x0000001A System.Void ProductDisplay::Start()
+extern void ProductDisplay_Start_mD8E70BC4341EC99FD0D82B045E4FAD0010CC1453 (void);
+// 0x0000001B System.Void ProductDisplay::OnEnable()
 extern void ProductDisplay_OnEnable_mF2BE47B8379C2CA3716559D87957CC971B291361 (void);
-// 0x0000001A System.Void ProductDisplay::ChangeColor()
-extern void ProductDisplay_ChangeColor_m7CB85DAE87440CF7E89D3308E32FF303126F5854 (void);
-// 0x0000001B System.Void ProductDisplay::LoadNewProduct(ProductData)
+// 0x0000001C System.Void ProductDisplay::LoadNewProduct(ProductData)
 extern void ProductDisplay_LoadNewProduct_m8380C811FE994CB813206F8C9423A984FA16BA73 (void);
-// 0x0000001C System.Void ProductDisplay::.ctor()
+// 0x0000001D System.Void ProductDisplay::FabricCall()
+extern void ProductDisplay_FabricCall_mFDF50EF33C12D3CD255ED6CD9BFF042ECFEFC168 (void);
+// 0x0000001E System.Void ProductDisplay::IroningCall()
+extern void ProductDisplay_IroningCall_m9DEFD848298D459B99C5B92F20CCDEB3C9AE2D29 (void);
+// 0x0000001F System.Void ProductDisplay::WashingCall()
+extern void ProductDisplay_WashingCall_m648854C8AD20DBDC04B7698CB0BBA86B31423B9C (void);
+// 0x00000020 System.Void ProductDisplay::TechniquesCall()
+extern void ProductDisplay_TechniquesCall_m043E6FF4ED404D1546B432C0B0D46B86027B7BB2 (void);
+// 0x00000021 System.Void ProductDisplay::DyesCall()
+extern void ProductDisplay_DyesCall_m9D0E22CF0D2967DADBD5B25363623B6141D238AA (void);
+// 0x00000022 System.Void ProductDisplay::CommunityCall()
+extern void ProductDisplay_CommunityCall_m130B2A07C2F8E7D7E256E2E7F1991015742FF45F (void);
+// 0x00000023 System.Void ProductDisplay::LoadNewObject(UnityEngine.GameObject)
+extern void ProductDisplay_LoadNewObject_m822461FFE89A3B893FB5ED974F9667EA73BD3D34 (void);
+// 0x00000024 System.Void ProductDisplay::SwapOldToNew()
+extern void ProductDisplay_SwapOldToNew_m5A9C7B61B134E165CFB31567A32F53BEAAEAD53E (void);
+// 0x00000025 System.Void ProductDisplay::.ctor()
 extern void ProductDisplay__ctor_m998BEE19C0D57E18757C0B6B1A19A7FF79CDF842 (void);
-static Il2CppMethodPointer s_methodPointers[28] = 
+static Il2CppMethodPointer s_methodPointers[37] = 
 {
 	AnchorCreator_get_AnchorPrefab_mBBAF7805E9D9F8D79408EE642D153BC76306B25A,
 	AnchorCreator_set_AnchorPrefab_m53CC9CC3022C713826B44536B48B462C8A1FACFF,
@@ -92,49 +110,67 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	PlaceTrackedImage_OnTrackedImagesChanged_m357EDDE741BE5B146B06BFDAFFD2D318D72B6EB1,
 	PlaceTrackedImage_Reset_mCA4C0874D9A9E239171593A13BABE63B2DB04248,
 	PlaceTrackedImage_DestroyTrackedComponent_m6CB017B420992CC98713070D23AFE1A9AB5AC7A7,
+	PlaceTrackedImage_NewUI_mC1EB4609951986C230AFE374DE6B6B23B0EA2C8A,
 	PlaceTrackedImage__ctor_m9BF1FE5142D225B651568DF1AECB42B019F3153A,
 	ProductData__ctor_mBBB18398A2B12E7DE775ADB32F00675D07BFD14F,
+	ProductDisplay_Start_mD8E70BC4341EC99FD0D82B045E4FAD0010CC1453,
 	ProductDisplay_OnEnable_mF2BE47B8379C2CA3716559D87957CC971B291361,
-	ProductDisplay_ChangeColor_m7CB85DAE87440CF7E89D3308E32FF303126F5854,
 	ProductDisplay_LoadNewProduct_m8380C811FE994CB813206F8C9423A984FA16BA73,
+	ProductDisplay_FabricCall_mFDF50EF33C12D3CD255ED6CD9BFF042ECFEFC168,
+	ProductDisplay_IroningCall_m9DEFD848298D459B99C5B92F20CCDEB3C9AE2D29,
+	ProductDisplay_WashingCall_m648854C8AD20DBDC04B7698CB0BBA86B31423B9C,
+	ProductDisplay_TechniquesCall_m043E6FF4ED404D1546B432C0B0D46B86027B7BB2,
+	ProductDisplay_DyesCall_m9D0E22CF0D2967DADBD5B25363623B6141D238AA,
+	ProductDisplay_CommunityCall_m130B2A07C2F8E7D7E256E2E7F1991015742FF45F,
+	ProductDisplay_LoadNewObject_m822461FFE89A3B893FB5ED974F9667EA73BD3D34,
+	ProductDisplay_SwapOldToNew_m5A9C7B61B134E165CFB31567A32F53BEAAEAD53E,
 	ProductDisplay__ctor_m998BEE19C0D57E18757C0B6B1A19A7FF79CDF842,
 };
-static const int32_t s_InvokerIndices[28] = 
+static const int32_t s_InvokerIndices[37] = 
 {
-	5398,
-	4373,
-	5504,
-	5504,
-	5504,
-	5504,
-	8649,
-	5440,
-	4407,
-	5504,
-	5504,
-	5504,
-	4259,
-	4373,
-	5504,
-	8649,
-	5504,
-	5504,
-	5504,
-	4269,
-	4269,
-	4269,
-	5504,
-	5504,
-	5504,
-	5504,
-	4373,
-	5504,
+	5397,
+	4372,
+	5503,
+	5503,
+	5503,
+	5503,
+	8648,
+	5439,
+	4406,
+	5503,
+	5503,
+	5503,
+	4258,
+	4372,
+	5503,
+	8648,
+	5503,
+	5503,
+	5503,
+	4268,
+	4268,
+	4268,
+	2307,
+	5503,
+	5503,
+	5503,
+	5503,
+	4372,
+	5503,
+	5503,
+	5503,
+	5503,
+	5503,
+	5503,
+	4372,
+	5503,
+	5503,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	28,
+	37,
 	s_methodPointers,
 	0,
 	NULL,
