@@ -16,7 +16,7 @@ public class PlaceTrackedImage : MonoBehaviour{
 
     private readonly Dictionary<string, GameObject> instantiatedPrefabs = new Dictionary<string, GameObject>();
 
-    private string previousPrefab;
+    private string previousPrefab = null;
 
     void Awake(){
         trackedImageManager = GetComponent<ARTrackedImageManager>();
@@ -44,11 +44,15 @@ public class PlaceTrackedImage : MonoBehaviour{
                 //if tracked image matches product, instantiate model of product at the tracked image location
                 if(string.Compare(curProduct.name, imageName, StringComparison.OrdinalIgnoreCase) == 0 
                 && !instantiatedPrefabs.ContainsKey(imageName)){
+                    //if there has been a previous instance of the object destroy it
+                    //if(previousPrefab != null) DestroyTrackedComponent(previousPrefab);
                     //get 3d object of correct product, and create at tracked object position
                     var newPrefab = Instantiate(curProduct.prefab, trackedImage.transform);
-                    previousPrefab = newPrefab.name;
                     //add instantiated prefab to list of active prefabs
                     instantiatedPrefabs[imageName] = newPrefab;
+
+                    //add key for prefab
+                    previousPrefab = newPrefab.name;
 
                     //find ui element, set parent to tracked image transform
                     var ui = GameObject.Find("prefabTest").transform;
@@ -69,9 +73,9 @@ public class PlaceTrackedImage : MonoBehaviour{
         //old update function, would cause objects to flicker in and out of view
         
         //if image is update, make sure instantiated objects are tracking to proper tracked images
-        foreach(var trackedImage in eventArgs.updated){
+        /*foreach(var trackedImage in eventArgs.updated){
             instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(trackedImage.trackingState == TrackingState.Tracking);
-        }
+        }*/
 
         //when tracked object is removed from tracking order, destroy object model and remove image from list
         /*foreach(var trackedImage in eventArgs.removed){
@@ -80,9 +84,15 @@ public class PlaceTrackedImage : MonoBehaviour{
         }*/
     }
 
-    public void Reset(){
-        foreach(var trackedImage in trackedImageManager.trackables){
-            Destroy(trackedImage);
+    public void Reset(ARTrackedImagesChangedEventArgs eventArgs){
+        foreach(var trackedImage in eventArgs.removed){
+            Destroy(instantiatedPrefabs[trackedImage.referenceImage.name]);
+            instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
         }
+    }
+
+    private void DestroyTrackedComponent(ARTrackedImagesChangedEventArgs eventArgs){
+        Destroy(instantiatedPrefabs[name]);
+        instantiatedPrefabs.Remove(name);
     }
 }

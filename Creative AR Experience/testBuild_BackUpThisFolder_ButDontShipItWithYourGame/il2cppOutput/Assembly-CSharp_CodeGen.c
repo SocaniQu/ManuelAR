@@ -52,21 +52,23 @@ extern void PlaceTrackedImage_OnEnable_mFBA28F3081AD9D76650C5C2B5CB46DC6F50DEECB
 extern void PlaceTrackedImage_OnDisable_m63CE8CBB7482009105DFABF6FEED4626F23B0B30 (void);
 // 0x00000014 System.Void PlaceTrackedImage::OnTrackedImagesChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void PlaceTrackedImage_OnTrackedImagesChanged_m357EDDE741BE5B146B06BFDAFFD2D318D72B6EB1 (void);
-// 0x00000015 System.Void PlaceTrackedImage::Reset()
-extern void PlaceTrackedImage_Reset_mB32E66C6D2947BF5955465391FF25F2F1D49B04D (void);
-// 0x00000016 System.Void PlaceTrackedImage::.ctor()
+// 0x00000015 System.Void PlaceTrackedImage::Reset(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+extern void PlaceTrackedImage_Reset_mCA4C0874D9A9E239171593A13BABE63B2DB04248 (void);
+// 0x00000016 System.Void PlaceTrackedImage::DestroyTrackedComponent(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+extern void PlaceTrackedImage_DestroyTrackedComponent_m6CB017B420992CC98713070D23AFE1A9AB5AC7A7 (void);
+// 0x00000017 System.Void PlaceTrackedImage::.ctor()
 extern void PlaceTrackedImage__ctor_m9BF1FE5142D225B651568DF1AECB42B019F3153A (void);
-// 0x00000017 System.Void ProductData::.ctor()
+// 0x00000018 System.Void ProductData::.ctor()
 extern void ProductData__ctor_mBBB18398A2B12E7DE775ADB32F00675D07BFD14F (void);
-// 0x00000018 System.Void ProductDisplay::OnEnable()
+// 0x00000019 System.Void ProductDisplay::OnEnable()
 extern void ProductDisplay_OnEnable_mF2BE47B8379C2CA3716559D87957CC971B291361 (void);
-// 0x00000019 System.Void ProductDisplay::ChangeColor()
+// 0x0000001A System.Void ProductDisplay::ChangeColor()
 extern void ProductDisplay_ChangeColor_m7CB85DAE87440CF7E89D3308E32FF303126F5854 (void);
-// 0x0000001A System.Void ProductDisplay::LoadNewProduct(ProductData)
+// 0x0000001B System.Void ProductDisplay::LoadNewProduct(ProductData)
 extern void ProductDisplay_LoadNewProduct_m8380C811FE994CB813206F8C9423A984FA16BA73 (void);
-// 0x0000001B System.Void ProductDisplay::.ctor()
+// 0x0000001C System.Void ProductDisplay::.ctor()
 extern void ProductDisplay__ctor_m998BEE19C0D57E18757C0B6B1A19A7FF79CDF842 (void);
-static Il2CppMethodPointer s_methodPointers[27] = 
+static Il2CppMethodPointer s_methodPointers[28] = 
 {
 	AnchorCreator_get_AnchorPrefab_mBBAF7805E9D9F8D79408EE642D153BC76306B25A,
 	AnchorCreator_set_AnchorPrefab_m53CC9CC3022C713826B44536B48B462C8A1FACFF,
@@ -88,7 +90,8 @@ static Il2CppMethodPointer s_methodPointers[27] =
 	PlaceTrackedImage_OnEnable_mFBA28F3081AD9D76650C5C2B5CB46DC6F50DEECB,
 	PlaceTrackedImage_OnDisable_m63CE8CBB7482009105DFABF6FEED4626F23B0B30,
 	PlaceTrackedImage_OnTrackedImagesChanged_m357EDDE741BE5B146B06BFDAFFD2D318D72B6EB1,
-	PlaceTrackedImage_Reset_mB32E66C6D2947BF5955465391FF25F2F1D49B04D,
+	PlaceTrackedImage_Reset_mCA4C0874D9A9E239171593A13BABE63B2DB04248,
+	PlaceTrackedImage_DestroyTrackedComponent_m6CB017B420992CC98713070D23AFE1A9AB5AC7A7,
 	PlaceTrackedImage__ctor_m9BF1FE5142D225B651568DF1AECB42B019F3153A,
 	ProductData__ctor_mBBB18398A2B12E7DE775ADB32F00675D07BFD14F,
 	ProductDisplay_OnEnable_mF2BE47B8379C2CA3716559D87957CC971B291361,
@@ -96,7 +99,7 @@ static Il2CppMethodPointer s_methodPointers[27] =
 	ProductDisplay_LoadNewProduct_m8380C811FE994CB813206F8C9423A984FA16BA73,
 	ProductDisplay__ctor_m998BEE19C0D57E18757C0B6B1A19A7FF79CDF842,
 };
-static const int32_t s_InvokerIndices[27] = 
+static const int32_t s_InvokerIndices[28] = 
 {
 	5398,
 	4373,
@@ -118,7 +121,8 @@ static const int32_t s_InvokerIndices[27] =
 	5504,
 	5504,
 	4269,
-	5504,
+	4269,
+	4269,
 	5504,
 	5504,
 	5504,
@@ -130,7 +134,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	27,
+	28,
 	s_methodPointers,
 	0,
 	NULL,
