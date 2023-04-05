@@ -19,5 +19,21 @@ public class ProductData : ScriptableObject {
 
     public ProductType type;
 
-    public string fabric;
+    [TextArea(5,20)]
+    public string fabricInfo;
+
+    [TextArea(5,20)]
+    public string ironingInfo;
+
+    [TextArea(5,20)]
+    public string washingInfo;
+
+    [TextArea(5,20)]
+    public string techniquesInfo;
+
+    [TextArea(5,20)]
+    public string dyesInfo;
+
+    [TextArea(5,20)]
+    public string communityInfo;
 }
