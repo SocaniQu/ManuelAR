@@ -88,5 +88,6 @@ public class PlaceTrackedImage : MonoBehaviour{
         ui.localPosition = Vector3.zero;
         ui.localRotation = Quaternion.Euler(Vector3.zero);
         ui.GetComponent<ProductDisplay>().LoadNewProduct(curProduct);
+        //return ui.gameObject;
     }
 }
