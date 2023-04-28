@@ -14,12 +14,14 @@ public class PlaceTrackedImage : MonoBehaviour{
 
     public ProductData[] products;
 
-    private readonly Dictionary<string, GameObject> instantiatedPrefabs = new Dictionary<string, GameObject>();
+    public ProductData test;
 
-    //private string previousPrefab = null;
+    private readonly Dictionary<string, GameObject> instantiatedPrefabs = new Dictionary<string, GameObject>();
 
     void Awake(){
         trackedImageManager = GetComponent<ARTrackedImageManager>();
+        string productFilePath = "Assets/Products/Product Data";
+        products = Resources.LoadAll<ProductData>(productFilePath);
     }
 
     void OnEnable(){
@@ -89,5 +91,13 @@ public class PlaceTrackedImage : MonoBehaviour{
         ui.localRotation = Quaternion.Euler(Vector3.zero);
         ui.GetComponent<ProductDisplay>().LoadNewProduct(curProduct);
         //return ui.gameObject;
+    }
+
+    public void TestUI(){
+        var ui = Instantiate(uiPrefab);
+        ui.transform.name = "prefabTest";
+        ui.transform.localPosition = new Vector3(0f,0f, 1.0f);
+        ui.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        ui.GetComponent<ProductDisplay>().LoadNewProduct(test);
     }
 }

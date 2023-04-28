@@ -6,9 +6,9 @@ using UnityEngine;
 public class ProductData : ScriptableObject {
     public string productName;
     public int productID;
+    public GameObject prefab;
     [TextArea(5,20)]
     public string productDescription;
-    public GameObject prefab;
     public Color[] availableColors;
 
     public enum ProductType{

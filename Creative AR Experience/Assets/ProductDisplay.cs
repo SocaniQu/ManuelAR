@@ -1,3 +1,5 @@
+using System;
+using System.Runtime.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,58 +13,47 @@ public class ProductDisplay : MonoBehaviour
     private GameObject prevCon;
     private GameObject newCon;
 
-    public GameObject fabric;
+    [SerializableAttribute]
+    public struct WorldIcons{
+        public string name;
+        public GameObject obj;
+    };
 
-    void Start(){
+    public WorldIcons[] icons;
+
+    public Dictionary<string, GameObject> worldSpaceIcons = new Dictionary<string, GameObject>();
+
+    public enum DisplayState{
+        product,
+        fabric,
+        ironing,
+        washing,
+        techniques,
+        dye,
+        community
+    }
+
+    public DisplayState currentDisplay;
+
+    void Awake(){
         conAnim = this.GetComponent<Animation>();
         containerParent = this.transform.GetChild(0);
         prevCon = containerParent.GetChild(0).gameObject;
         newCon = containerParent.GetChild(1).gameObject;
 
         this.transform.GetChild(1).GetComponent<Canvas>().worldCamera = GameObject.Find("AR Camera").GetComponent<Camera>();
-    }
-    
-    void OnEnable()
-    {
-        if(product != null){
 
+        foreach(var icon in icons){
+            try{
+                worldSpaceIcons.Add(icon.name, icon.obj);
+            }catch{
+                Debug.Log("ERROR 1");
+            }
         }
-    }
-
-    void Update(){
-
     }
 
     public void LoadNewProduct(ProductData newProd){
         product = newProd;
-        StartCoroutine(LoadNewObject(product.prefab));
-    }
-
-    public void FabricCall(){
-        StartCoroutine(LoadNewObject(fabric));
-    }
-
-    public void IroningCall(){
-
-    }
-
-    public void WashingCall(){
-
-    }
-
-    public void TechniquesCall(){
-
-    }
-
-    public void DyesCall(){
-
-    }
-
-    public void CommunityCall(){
-
-    }
-
-    public void Back(){
         StartCoroutine(LoadNewObject(product.prefab));
     }
 
@@ -72,20 +63,31 @@ public class ProductDisplay : MonoBehaviour
         newOBJ.transform.localPosition = Vector3.zero;
         //newOBJ.localRotation = newCon.rotation;
         conAnim.Play("SwapObject");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
         //StartCoroutine(SwapOldToNew());
-        if(prevCon.transform.GetChild(0) != null) Destroy(prevCon.transform.GetChild(0).gameObject);
+        if(prevCon.transform.childCount != 0) Destroy(prevCon.transform.GetChild(0).gameObject);
         prevCon.transform.localScale = new Vector3(1,1,1);
         newCon.transform.GetChild(0).SetParent(prevCon.transform, false);
         newCon.transform.localScale = Vector3.zero;
     }
 
-    private IEnumerator SwapOldToNew(){
-        yield return new WaitForSeconds(0.5f);
+    public void CompareDisplay(string current){
+        if(currentDisplay == (DisplayState)DisplayState.Parse(typeof(DisplayState), current)){
+            StartCoroutine(LoadNewObject(product.prefab));
+            currentDisplay = DisplayState.product;
+        }else{
+            currentDisplay = (DisplayState)DisplayState.Parse(typeof(DisplayState), current);
+            StartCoroutine(LoadNewObject(worldSpaceIcons[current]));
+        }
+    }
+
+    /*
+    private void SwapOldToNew(){
+        //yield return new WaitForSeconds(0.5f);
         //if(prevCon.GetChild(0) != null)
-        if(prevCon.transform.GetChild(0) != null) Destroy(prevCon.transform.GetChild(0).gameObject);
+        if(prevCon.transform.childCount != 0) Destroy(prevCon.transform.GetChild(0).gameObject);
         prevCon.transform.localScale = new Vector3(1,1,1);
         newCon.transform.GetChild(0).SetParent(prevCon.transform, false);
         newCon.transform.localScale = Vector3.zero;
-    }
+    }*/
 }
