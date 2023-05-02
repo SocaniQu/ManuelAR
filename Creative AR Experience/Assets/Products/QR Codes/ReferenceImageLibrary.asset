@@ -18,32 +18,32 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 4962267460215561971
-      m_GuidHigh: 14095279981460996244
+      m_GuidLow: 4620312505557535522
+      m_GuidHigh: 8439243256303976087
     m_SerializedTextureGuid:
-      m_GuidLow: 10593725788932921502
-      m_GuidHigh: 788067195157804377
-    m_Size: {x: 0.063, y: 0.08786099}
+      m_GuidLow: 13935263751340890988
+      m_GuidHigh: 11757485571315658489
+    m_Size: {x: 0.07, y: 0.07}
     m_SpecifySize: 1
-    m_Name: c_cancel
+    m_Name: sphere
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5396523752844582384
-      m_GuidHigh: 14701380271730639515
+      m_GuidLow: 5440421515072981691
+      m_GuidHigh: 13030620641469115015
     m_SerializedTextureGuid:
-      m_GuidLow: 9823486147636096194
-      m_GuidHigh: 2322245607176734491
-    m_Size: {x: 0.063, y: 0.08786099}
+      m_GuidLow: 9400340015414589803
+      m_GuidHigh: 431830060947892441
+    m_Size: {x: 0.07, y: 0.07}
     m_SpecifySize: 1
-    m_Name: c_druid
+    m_Name: tophat
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5087168642227400464
-      m_GuidHigh: 505701233028590493
+      m_GuidLow: 4891631841356946769
+      m_GuidHigh: 14283839931327183523
     m_SerializedTextureGuid:
-      m_GuidLow: 10679207762246443944
-      m_GuidHigh: 1979668400402900874
-    m_Size: {x: 0.063, y: 0.08786099}
+      m_GuidLow: 8440914944543769263
+      m_GuidHigh: 2339866212410852873
+    m_Size: {x: 0.07, y: 0.07}
     m_SpecifySize: 1
-    m_Name: c_manalith
+    m_Name: tshirt
     m_Texture: {fileID: 0}

@@ -40,8 +40,8 @@ public class MenuSwipe : MonoBehaviour, IDragHandler, IEndDragHandler{
     void Start(){
         swipeDeadBottom = swipeDeadZoneBorder;
         swipeDeadTop = Screen.height - swipeDeadZoneBorder;
-        bottomClosedPos = new Vector3(0f, -(Screen.height/2f), 0f);
-        bottomOpenPos = new Vector3(0f, -(Screen.height/2f)+400f, 0f);
+        bottomClosedPos = new Vector3(Screen.width/2f, bottomClosedHeight, 0f);
+        bottomOpenPos = new Vector3(Screen.width/2f, bottomOpenHeight, 0f);
     }
 
     public void OnDrag(PointerEventData data){
@@ -86,7 +86,7 @@ public class MenuSwipe : MonoBehaviour, IDragHandler, IEndDragHandler{
         float t = 0f;
         while(t <= 1.0){
             t += Time.deltaTime/seconds;
-            menu.transform.localPosition = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, t));
+            menu.transform.position = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, t));
             yield return null;
         }
     }

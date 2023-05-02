@@ -11,6 +11,7 @@ public class PlaceTrackedImage : MonoBehaviour{
     private ARTrackedImageManager trackedImageManager;
 
     public GameObject uiPrefab;
+    public GameObject bubbles;
 
     public ProductData[] products;
 
