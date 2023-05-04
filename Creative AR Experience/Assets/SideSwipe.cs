@@ -18,19 +18,17 @@ public class SideSwipe : MonoBehaviour, IDragHandler, IEndDragHandler {
         currentLocation = transform.localPosition;
         try{  
             parent = parentMenu.GetComponent<MenuSwipe>();
-        }catch{
-            Debug.Log("Parent menu is missing MenuSwipe script");
-        }
+        }catch{}
     }
 
     public void OnDrag(PointerEventData data){
-        parent.bottomMenuSwipe = true;
+        if(parent != null) parent.bottomMenuSwipe = true;
         float dif = data.pressPosition.x - data.position.x;
         transform.localPosition = currentLocation - new Vector3(dif, 0f, 0f);
     }
 
     public void OnEndDrag(PointerEventData data){
-        parent.bottomMenuSwipe = false;
+        if(parent != null) parent.bottomMenuSwipe = false;
         float percent = (data.pressPosition.x - data.position.x)/Screen.width;
         if(Mathf.Abs(percent) >= swipeThreshold){
             Vector3 newLocation = currentLocation;
