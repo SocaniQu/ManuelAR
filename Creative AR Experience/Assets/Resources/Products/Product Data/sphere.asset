@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0281f02debe5904786b54132238a8ed, type: 3}
+  m_Name: sphere
+  m_EditorClassIdentifier: 
+  productName: sphere
+  productID: 0
+  prefab: {fileID: 8635836162564553673, guid: 0d6ec2be665f39f46a23e30d52e38b43, type: 3}
+  productDescription: This item is a sphere
+  availableColors: []
+  type: 0
+  fabricInfo: sphere fabric
+  ironingInfo: sphere ironing
+  washingInfo: sphere washing
+  techniquesInfo: sphere techniques
+  dyesInfo: sphere dyes
+  communityInfo: sphere community

@@ -4680,22 +4680,18 @@ struct WorldIcons_t958416A43AB0DE362C3A4E4E697661145483AE14
 	String_t* ___name_0;
 	// UnityEngine.GameObject ProductDisplay/WorldIcons::obj
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___obj_1;
-	// System.String ProductDisplay/WorldIcons::info
-	String_t* ___info_2;
 };
 // Native definition for P/Invoke marshalling of ProductDisplay/WorldIcons
 struct WorldIcons_t958416A43AB0DE362C3A4E4E697661145483AE14_marshaled_pinvoke
 {
 	char* ___name_0;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___obj_1;
-	char* ___info_2;
 };
 // Native definition for COM marshalling of ProductDisplay/WorldIcons
 struct WorldIcons_t958416A43AB0DE362C3A4E4E697661145483AE14_marshaled_com
 {
 	Il2CppChar* ___name_0;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___obj_1;
-	Il2CppChar* ___info_2;
 };
 
 // System.Text.RegularExpressions.Regex/CachedCodeEntryKey
